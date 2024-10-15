@@ -1,7 +1,12 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <div class="h-100vh flex items-center justify-center">
-    <div>
+  <div>
+    home
+    <RouterLink to="/login">
       login
-    </div>
+    </RouterLink>
   </div>
 </template>
