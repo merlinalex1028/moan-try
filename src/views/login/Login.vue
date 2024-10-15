@@ -3,10 +3,10 @@ import type { ILoginInfo } from '@/types/login'
 import Container from './Container.vue'
 
 const info: ILoginInfo = {
-  title: 'Create an account',
-  description: 'Enter your email below to create your account',
-  confirmButtonText: 'Create account',
-  linkButtonText: 'Already have an account? Login'
+  title: 'Login to Moan',
+  description: 'Enter your email and password to login',
+  confirmButtonText: 'Login',
+  linkButtonText: 'Don\'t have an account? Register'
 }
 </script>
 
