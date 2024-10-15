@@ -8,7 +8,29 @@ import {
 } from 'unocss'
 
 export default defineConfig({
-  shortcuts: [],
+  shortcuts: [{
+    'border-base': 'border border-level-fifth border-solid',
+    'flex-center': 'flex items-center justify-center',
+    'divider': 'border-t border-level-fifth my-sm'
+  }],
+  theme: {
+    colors: {
+      primary: '#4b8eff',
+      hover: {
+        primary: '#699ff9'
+      },
+      success: '#2dc888',
+      error: '#f56c6c',
+      warning: '#f5a623',
+      level: {
+        first: '#262a30',
+        second: '#5c626b',
+        third: '#959ba3',
+        fourth: '#bfbfbf',
+        fifth: '#e1e1e1'
+      }
+    }
+  },
   presets: [
     presetUno(),
     presetAttributify(),
