@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ILoginForm, ILoginInfo } from '@/types/login'
+import MaButton from '@/components/MaButton/index.vue'
 import MaInput from '@/components/MaInput/index.vue'
 import { ref } from 'vue'
 
@@ -33,4 +34,10 @@ const form = ref<ILoginForm>({
     </div>
     <MaInput v-model="form.password" placeholder="Enter your password" />
   </div>
+  <MaButton class="mb-4 w-full">
+    {{ info.confirmButtonText }}
+  </MaButton>
+  <MaButton class="w-full">
+    {{ info.linkButtonText }}
+  </MaButton>
 </template>
