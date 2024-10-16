@@ -10,7 +10,9 @@ import {
 export default defineConfig({
   shortcuts: [{
     'border-base': 'border border-level-fifth border-solid',
-    'flex-center': 'flex items-center justify-center',
+    'flex-base': 'flex items-center',
+    'flex-center': 'flex-base justify-center',
+    'flex-between': 'flex-base justify-between',
     'divider': 'border-t border-level-fifth my-sm'
   }],
   theme: {

@@ -32,11 +32,12 @@ const textTheme = {
 <template>
   <button
     v-bind="$attrs"
-    class="border-base rounded px-4 py-2 font-size-sm"
+    class="border-base px-4 py-2 font-size-sm"
     :class="[
       plain ? 'bg-white' : backgroundTheme[type],
       borderTheme[type],
-      plain ? textTheme[type] : 'text-white'
+      plain ? textTheme[type] : 'text-white',
+      rounded ? 'rounded-full' : 'rounded'
     ]"
   >
     <slot />
