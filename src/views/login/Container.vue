@@ -3,6 +3,7 @@ import type { ILoginForm, ILoginInfo } from '@/types/login'
 import MaButton from '@/components/MaButton/index.vue'
 import MaInput from '@/components/MaInput/index.vue'
 import { ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
 defineProps<{
   info: ILoginInfo
@@ -12,6 +13,13 @@ const form = ref<ILoginForm>({
   email: '',
   password: ''
 })
+
+const route = useRoute()
+const router = useRouter()
+
+function handleLink() {
+  router.push(route.name === 'Login' ? '/register' : '/login')
+}
 </script>
 
 <template>
@@ -34,10 +42,10 @@ const form = ref<ILoginForm>({
     </div>
     <MaInput v-model="form.password" placeholder="Enter your password" show-password />
   </div>
-  <MaButton class="mb-4 w-full">
+  <MaButton class="mb-4 w-full bg-level-first!">
     {{ info.confirmButtonText }}
   </MaButton>
-  <MaButton class="w-full">
+  <MaButton class="w-full bg-level-first!" @click="handleLink">
     {{ info.linkButtonText }}
   </MaButton>
 </template>
