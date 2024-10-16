@@ -32,7 +32,7 @@ const form = ref<ILoginForm>({
     <div class="mb-2 font-size-4 text-level-second font-500">
       Password
     </div>
-    <MaInput v-model="form.password" placeholder="Enter your password" />
+    <MaInput v-model="form.password" placeholder="Enter your password" show-password />
   </div>
   <MaButton class="mb-4 w-full">
     {{ info.confirmButtonText }}
