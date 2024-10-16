@@ -1,12 +1,32 @@
 <script setup lang="ts">
 import type { IButtonProps } from '.'
 import { defaultButtonProps } from '.'
-import { backgroundTheme, borderTheme, textTheme } from './theme'
 
 withDefaults(
   defineProps<IButtonProps>(),
   defaultButtonProps
 )
+
+const backgroundTheme = {
+  primary: 'bg-primary',
+  success: 'bg-success',
+  error: 'bg-error',
+  warning: 'bg-warning'
+}
+
+const borderTheme = {
+  primary: 'border-primary',
+  success: 'border-success',
+  error: 'border-error',
+  warning: 'border-warning'
+}
+
+const textTheme = {
+  primary: 'text-primary',
+  success: 'text-success',
+  error: 'text-error',
+  warning: 'text-warning'
+}
 </script>
 
 <template>
