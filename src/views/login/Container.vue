@@ -42,10 +42,10 @@ function handleLink() {
     </div>
     <MaInput v-model="form.password" placeholder="Enter your password" show-password />
   </div>
-  <MaButton class="mb-4 w-full bg-level-first!">
+  <MaButton class="mb-4 w-full">
     {{ info.confirmButtonText }}
   </MaButton>
-  <MaButton class="w-full bg-level-first!" @click="handleLink">
+  <MaButton class="w-full" @click="handleLink">
     {{ info.linkButtonText }}
   </MaButton>
 </template>
