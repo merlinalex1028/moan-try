@@ -15,7 +15,11 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@shikijs/markdown-it": "^1.22.0",
+    "@shikijs/twoslash": "^1.22.0",
     "pinia": "^2.2.4",
+    "unplugin-vue-markdown": "^0.26.2",
+    "vee-validate": "^4.13.2",
     "vue": "^3.5.11",
     "vue-router": "^4.4.5"
   },
