@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <div
     class="h-8 w-full flex-center border-base border-rounded-md px-2"
-    :class="[isFocused ? 'border-primary' : '']"
+    :class="[isFocused ? 'border-primary-400' : '']"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
