@@ -1,14 +1,18 @@
 import { ref } from 'vue'
 
-export function useHover() {
-  const isHovered = ref(false)
+export function useHover(name: string = 'default') {
+  const hoverStates = ref(new Map<string, boolean>())
 
   function handleMouseEnter() {
-    isHovered.value = true
+    hoverStates.value.set(name, true)
   }
 
   function handleMouseLeave() {
-    isHovered.value = false
+    hoverStates.value.set(name, false)
+  }
+
+  function isHovered() {
+    return hoverStates.value.get(name) || false
   }
 
   return {

@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <div
     class="h-8 w-full flex-center border-base border-rounded-md px-2"
-    :class="[isFocused ? 'border-primary-400' : '']"
+    :class="[isFocused() ? 'border-primary-400' : '']"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
   >
@@ -47,12 +47,12 @@ onMounted(() => {
       @blur="handleBlur"
     >
     <div
-      v-if="clearable && isHovered && modelValue"
+      v-if="clearable && isHovered() && modelValue"
       class="i-material-symbols-cancel-outline-rounded ml-2 cursor-pointer color-level-fourth"
       @click="handleClearValue"
     />
     <div
-      v-if="showPassword && isHovered && modelValue"
+      v-if="showPassword && isHovered() && modelValue"
       class="ml-2 cursor-pointer color-level-fourth"
       :class="type === 'text' ? 'i-material-symbols-visibility' : 'i-material-symbols-visibility-off'"
       @click="handleSwitchPasswordMode"

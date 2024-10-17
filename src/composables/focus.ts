@@ -1,14 +1,18 @@
 import { ref } from 'vue'
 
-export function useFocus() {
-  const isFocused = ref(false)
+export function useFocus(name: string = 'default') {
+  const focusStatus = ref(new Map<string, boolean>())
 
   function handleFocus() {
-    isFocused.value = true
+    focusStatus.value.set(name, true)
   }
 
   function handleBlur() {
-    isFocused.value = false
+    focusStatus.value.set(name, false)
+  }
+
+  function isFocused() {
+    return focusStatus.value.get(name) || false
   }
 
   return {
