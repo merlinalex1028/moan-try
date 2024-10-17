@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MaButton from '@/components/MaButton/index.vue'
-import { GITHUB_PROFILE } from '@/constant'
+import { PROJECT_GITHUB_PAGE } from '@/constant'
 import { EHeaderSource } from '@/enums/layout'
 
 defineProps<{
@@ -41,7 +41,7 @@ defineProps<{
           Login
         </MaButton>
       </RouterLink>
-      <a class="i-mdi-github font-size-4xl" :href="GITHUB_PROFILE" target="_blank" />
+      <a class="i-mdi-github font-size-4xl" :href="PROJECT_GITHUB_PAGE" target="_blank" />
     </div>
   </div>
 </template>
