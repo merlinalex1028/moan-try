@@ -9,9 +9,9 @@ const route = useRoute()
 
 <template>
   <Header :source="EHeaderSource.backstage" />
-  <div class="flex pt-16">
+  <div class="h-[100vh] w-full flex pt-16">
     <SideBar />
-    <div :class="{ 'm-4': route.meta.gap }">
+    <div :class="{ 'm-4': route.meta.gap }" class="flex-1 overflow-y-auto">
       <RouterView />
     </div>
   </div>
