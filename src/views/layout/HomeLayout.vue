@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import Header from '../layout/Header.vue'
+import { EHeaderSource } from '@/enums/layout'
+import Header from './Header.vue'
 </script>
 
 <template>
-  <Header />
+  <Header :source="EHeaderSource.portal" />
 </template>

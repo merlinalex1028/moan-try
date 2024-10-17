@@ -1,8 +1,16 @@
 const dashboardRoutes = [
   {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () => import('@/views/dashboard/index.vue')
+    path: '/backstage',
+    component: () => import('@/views/layout/BackstageLayout.vue'),
+    children: [
+      {
+        path: 'dashboard',
+        component: () => import('@/views/dashboard/index.vue'),
+        meta: {
+          gap: true
+        }
+      }
+    ]
   }
 ]
 
