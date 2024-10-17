@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import Header from '../layout/Header.vue'
+
 </script>
 
 <template>
-  <Header />
+  <div>
+    404
+  </div>
 </template>
