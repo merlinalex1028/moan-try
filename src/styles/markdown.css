@@ -7,13 +7,13 @@
 .dark .shiki {
   background-color: #0e0e0e;
   border-radius: 0.5em;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 html:not(.dark) .shiki {
   background-color: #fafafa;
   border-radius: 0.5em;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 html:not(.dark) .shiki,
