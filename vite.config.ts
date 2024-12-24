@@ -1,10 +1,12 @@
 import { fileURLToPath, URL } from 'node:url'
 
+import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 import MarkdownItShiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import UnoCSS from 'unocss/vite'
+import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -38,6 +40,11 @@ export default defineConfig({
           ]
         }))
       }
+    }),
+    Components({
+      resolvers: [
+        PrimeVueResolver()
+      ]
     })
   ],
   resolve: {
