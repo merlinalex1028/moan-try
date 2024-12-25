@@ -19,6 +19,7 @@
     "@shikijs/markdown-it": "^1.24.4",
     "@shikijs/twoslash": "^1.24.4",
     "pinia": "^2.3.0",
+    "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
     "unplugin-vue-markdown": "^0.26.3",
     "vue": "^3.5.13",

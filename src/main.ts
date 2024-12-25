@@ -10,8 +10,9 @@ import '@unocss/reset/tailwind.css'
 import '@shikijs/twoslash/style-rich.css'
 import './styles/main.css'
 import './styles/prose.css'
-
 import './styles/markdown.css'
+import './styles/menu.css'
+import 'primeicons/primeicons.css'
 
 import 'uno.css'
 

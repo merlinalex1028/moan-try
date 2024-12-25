@@ -24,6 +24,12 @@ export default defineConfig({
     vueDevTools(),
     UnoCSS(),
     Markdown({
+      // default options passed to markdown-it
+      // see: https://markdown-it.github.io/markdown-it/
+      wrapperClasses: 'prose m-auto slide-enter-content',
+      markdownItOptions: {
+        quotes: '""\'\''
+      },
       async markdownItSetup(md) {
         md.use(await MarkdownItShiki({
           themes: {
