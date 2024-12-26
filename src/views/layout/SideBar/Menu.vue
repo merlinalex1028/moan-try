@@ -3,7 +3,20 @@ import type { IMenuItem } from '@/types/sidebar'
 import { ref } from 'vue'
 import MenuItem from './MenuItem.vue'
 
-const model = ref<IMenuItem[]>([])
+const model = ref<IMenuItem[]>([
+  {
+    label: 'Home',
+    items: [
+      { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/backstage/dashboard' }
+    ]
+  },
+  {
+    label: 'WEB API',
+    items: [
+      { label: 'CustomEvent', icon: 'pi pi-fw pi-send', to: '/webapi/custom' }
+    ]
+  }
+])
 </script>
 
 <template>

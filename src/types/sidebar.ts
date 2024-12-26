@@ -6,7 +6,6 @@ export interface IMenuItem {
   items?: IMenuItem[] // submenus
 }
 
-
 export interface IMenuItemProps {
   item: IMenuItem
   index: number
