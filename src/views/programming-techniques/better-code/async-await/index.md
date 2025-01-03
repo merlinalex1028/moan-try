@@ -2,7 +2,7 @@
 
 ## Scenario One
 
-Bad Code
+**:x: Bad Code**
 
 ```ts
 async function init() {
@@ -14,7 +14,7 @@ async function init() {
 
 if one of the fetch functions takes a long time to complete, the other fetch functions will be blocked. so we can use `Promise.all` to solve this problem.
 
-Good Code
+**:white_check_mark: Good Code**
 
 ```ts
 async function init() {
