@@ -5,6 +5,7 @@ import MarkdownItShiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { full as emoji } from 'markdown-it-emoji'
 import GitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -48,6 +49,8 @@ export default defineConfig({
         }))
 
         md.use(GitHubAlerts)
+
+        md.use(emoji)
       }
     }),
     Components({

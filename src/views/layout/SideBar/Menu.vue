@@ -11,6 +11,12 @@ const model = ref<IMenuItem[]>([
     ]
   },
   {
+    label: 'Display Content',
+    items: [
+      { label: 'Emoji', icon: 'pi pi-fw pi-image', to: '/display-content/emoji' }
+    ]
+  },
+  {
     label: 'WEB API',
     items: [
       { label: 'CustomEvent', icon: 'pi pi-fw pi-send', to: '/webapi/custom' }
