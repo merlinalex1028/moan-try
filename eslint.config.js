@@ -11,7 +11,15 @@ export default antfu(
     unocss: true,
     vue: {
       overrides: {
-        'vue/comma-dangle': ['error', 'never']
+        'vue/comma-dangle': ['error', 'never'],
+        'vue/max-attributes-per-line': ['error', {
+          singleline: {
+            max: 3
+          },
+          multiline: {
+            max: 1
+          }
+        }]
       }
     }
   },

@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     MaButton: typeof import('./src/components/MaButton/index.vue')['default']
     MaInput: typeof import('./src/components/MaInput/index.vue')['default']
+    MaTag: typeof import('./src/components/MaTag/index.vue')['default']
     PanelMenu: typeof import('primevue/panelmenu')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
