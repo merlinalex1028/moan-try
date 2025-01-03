@@ -19,6 +19,13 @@ const programmingTechniquesRoutes = [
             meta: {
               gap: true
             }
+          },
+          {
+            path: 'error-handling',
+            component: () => import('@/views/programming-techniques/better-code/error-handling/index.vue'),
+            meta: {
+              gap: true
+            }
           }
         ]
       }

@@ -4,8 +4,12 @@ import { useRouter } from 'vue-router'
 
 const codeList = [
   {
-    label: 'async-await',
+    label: 'async/await',
     to: '/programming-techniques/better-code/async-await'
+  },
+  {
+    label: 'error handling',
+    to: '/programming-techniques/better-code/error-handling'
   }
 ]
 
