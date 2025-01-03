@@ -15,6 +15,19 @@ const model = ref<IMenuItem[]>([
     items: [
       { label: 'CustomEvent', icon: 'pi pi-fw pi-send', to: '/webapi/custom' }
     ]
+  },
+  {
+    label: 'Programming Techniques',
+    items: [
+      {
+        label: 'BetterCode',
+        icon: 'pi pi-fw pi-code',
+        items: [
+          { label: 'collection', to: '/programming-techniques/better-code/index' },
+          { label: 'async-await', to: '/programming-techniques/better-code/async-await' }
+        ]
+      }
+    ]
   }
 ])
 </script>
