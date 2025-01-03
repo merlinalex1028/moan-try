@@ -39,12 +39,22 @@ const buttonList: {
         </MaButton>
       </DocumentRow>
       <DocumentRow title="Plain">
-        <MaButton v-for="button in buttonList" :key="button.type" :type="button.type" plain>
+        <MaButton
+          v-for="button in buttonList"
+          :key="button.type"
+          :type="button.type"
+          plain
+        >
           {{ button.text }}
         </MaButton>
       </DocumentRow>
       <DocumentRow title="Rounded">
-        <MaButton v-for="button in buttonList" :key="button.type" :type="button.type" rounded>
+        <MaButton
+          v-for="button in buttonList"
+          :key="button.type"
+          :type="button.type"
+          rounded
+        >
           {{ button.text }}
         </MaButton>
       </DocumentRow>
