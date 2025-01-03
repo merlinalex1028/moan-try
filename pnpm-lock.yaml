@@ -17,6 +17,9 @@ importers:
       '@shikijs/twoslash':
         specifier: ^1.26.0
         version: 1.26.0(typescript@5.5.4)
+      markdown-it-github-alerts:
+        specifier: ^0.3.0
+        version: 0.3.0(markdown-it@14.1.0)
       pinia:
         specifier: ^2.3.0
         version: 2.3.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
@@ -2464,6 +2467,11 @@ packages:
 
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
+
+  markdown-it-github-alerts@0.3.0:
+    resolution: {integrity: sha512-qyIuDyfdrVGHhY+E/44yMyNA3ZnayaT/KKT2VgkIz1nmrgiuPkdgPUh4YBZwgJ9VKEGJvGd82Ndrc4oGftrJWg==}
+    peerDependencies:
+      markdown-it: ^14.0.0
 
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
@@ -6260,6 +6268,10 @@ snapshots:
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  markdown-it-github-alerts@0.3.0(markdown-it@14.1.0):
+    dependencies:
+      markdown-it: 14.1.0
 
   markdown-it@14.1.0:
     dependencies:

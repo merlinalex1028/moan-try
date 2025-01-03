@@ -5,6 +5,7 @@ import MarkdownItShiki from '@shikijs/markdown-it'
 import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import GitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -45,6 +46,8 @@ export default defineConfig({
             })
           ]
         }))
+
+        md.use(GitHubAlerts)
       }
     }),
     Components({

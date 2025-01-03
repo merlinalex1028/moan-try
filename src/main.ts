@@ -8,12 +8,14 @@ import router from './router'
 import store from './stores'
 import '@unocss/reset/tailwind.css'
 import '@shikijs/twoslash/style-rich.css'
+import 'markdown-it-github-alerts/styles/github-colors-light.css'
+import 'markdown-it-github-alerts/styles/github-colors-dark-media.css'
+import 'markdown-it-github-alerts/styles/github-base.css'
 import './styles/main.css'
 import './styles/prose.css'
 import './styles/markdown.css'
 import './styles/menu.css'
 import 'primeicons/primeicons.css'
-
 import 'uno.css'
 
 const app = createApp(App)
