@@ -5,7 +5,7 @@ const webapiRoutes = [
     children: [
       {
         path: 'custom',
-        component: () => import('@/views/CustomEvent/index.vue'),
+        component: () => import('@/views/web-api/CustomEvent/index.vue'),
         meta: {
           gap: true
         }
