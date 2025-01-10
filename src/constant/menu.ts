@@ -61,5 +61,15 @@ export const menuList = [
         to: '/build-tool/vite-basic'
       }
     ]
+  },
+  {
+    label: 'Docker',
+    items: [
+      {
+        label: 'Basic',
+        icon: 'i-tabler-brand-docker',
+        to: '/docker/basic'
+      }
+    ]
   }
 ]

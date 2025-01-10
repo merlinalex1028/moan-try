@@ -98,6 +98,7 @@ export default defineConfig({
     transformerDirectives()
   ],
   safelist: [
-    'i-ri-menu-2-fill'
+    'i-tabler-brand-vite',
+    'i-tabler-brand-docker'
   ]
 })
