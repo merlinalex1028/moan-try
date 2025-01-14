@@ -99,6 +99,7 @@ export default defineConfig({
   ],
   safelist: [
     'i-tabler-brand-vite',
-    'i-tabler-brand-docker'
+    'i-tabler-brand-docker',
+    'i-mdi-vuejs'
   ]
 })

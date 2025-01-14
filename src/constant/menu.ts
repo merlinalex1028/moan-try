@@ -71,5 +71,15 @@ export const menuList = [
         to: '/docker/basic'
       }
     ]
+  },
+  {
+    label: 'Vue',
+    items: [
+      {
+        label: 'Reactivity Principle',
+        icon: 'i-mdi-vuejs',
+        to: '/vue/reactivity-principle'
+      }
+    ]
   }
 ]
