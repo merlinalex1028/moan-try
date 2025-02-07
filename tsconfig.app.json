@@ -9,6 +9,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["*.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["*.d.ts", "src/**/*", "src/**/*.vue", "database/types.ts"],
   "exclude": ["src/**/__tests__/*"]
 }

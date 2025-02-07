@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 // backstage routes
 const backstageModules = import.meta.glob('./backstage/**/*.ts', { eager: true })
@@ -7,6 +8,15 @@ Object.keys(backstageModules).forEach((key: string) => {
   const layoutData: any = backstageModules[key]
   const layoutArray = layoutData.default || []
   backstageRoutesList = backstageRoutesList.concat(layoutArray)
+})
+
+// home routes
+const homeModules = import.meta.glob('./home/**/*.ts', { eager: true })
+let homeRoutesList: Readonly<RouteRecordRaw[]> = []
+Object.keys(homeModules).forEach((key: string) => {
+  const layoutData: any = homeModules[key]
+  const layoutArray = layoutData.default || []
+  homeRoutesList = homeRoutesList.concat(layoutArray)
 })
 
 const router = createRouter({
@@ -32,7 +42,8 @@ const router = createRouter({
       name: 'NotFound',
       component: () => import('../views/404/index.vue')
     },
-    ...backstageRoutesList
+    ...backstageRoutesList,
+    ...homeRoutesList
   ]
 })
 

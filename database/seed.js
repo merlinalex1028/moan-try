@@ -12,7 +12,7 @@ function logErrorAndExit(tableName, error) {
 }
 
 function logStep(stepMessage) {
-  console.log(stepMessage)
+  console.warn(stepMessage)
 }
 
 async function seedProjects(num) {
@@ -31,12 +31,43 @@ async function seedProjects(num) {
   }
   const { data, error } = await supabase.from('projects').insert(projects).select('id')
 
-  if (error) return logErrorAndExit('Projects', error)
+  if (error)
+    return logErrorAndExit('Projects', error)
 
   logStep('Projects seeded successfully.')
 
   return data
 }
 
+async function seedTasks(numEntries, projectsIds) {
+  logStep('Seeding tasks...')
+  const tasks = []
+
+  for (let i = 0; i < numEntries; i++) {
+    tasks.push({
+      name: faker.lorem.words(3),
+      status: faker.helpers.arrayElement(['in-progress', 'completed']),
+      description: faker.lorem.paragraph(),
+      due_date: faker.date.future(),
+      project_id: faker.helpers.arrayElement(projectsIds),
+      collaborators: faker.helpers.arrayElements([1, 2, 3])
+    })
+  }
+
+  const { data, error } = await supabase.from('tasks').insert(tasks).select('id')
+
+  if (error)
+    return logErrorAndExit('Tasks', error)
+
+  logStep('Tasks seeded successfully.')
+
+  return data
+}
+
+async function seedDatabase(numEntriesPerTable) {
+  const projectsIds = (await seedProjects(numEntriesPerTable)).map(project => project.id)
+  await seedTasks(numEntriesPerTable, projectsIds)
+}
+
 // eslint-disable-next-line antfu/no-top-level-await
-await seedProjects(10)
+await seedDatabase(10)
