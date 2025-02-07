@@ -6,6 +6,16 @@ export const menuList = [
         label: 'Dashboard',
         icon: 'pi pi-fw pi-home',
         to: '/backstage/dashboard'
+      },
+      {
+        label: 'Projects',
+        icon: 'pi pi-fw pi-book',
+        to: '/projects'
+      },
+      {
+        label: 'Tasks',
+        icon: 'pi pi-fw pi-check-square',
+        to: '/tasks'
       }
     ]
   },
