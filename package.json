@@ -12,7 +12,13 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "supabase:init": "supabase init",
+    "supabase:login": "supabase login",
+    "supabase:link": "supabase link --project-ref enkfznchguvxrinjnbix",
+    "db:migrate:new": "supabase migration new projects-schema",
+    "db:reset": "supabase db reset --linked",
+    "db:seed": "node --env-file=.env database/seed.js"
   },
   "dependencies": {
     "@primevue/themes": "^4.2.5",
@@ -25,12 +31,14 @@
     "pinia": "^2.3.1",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
+    "supabase": "^2.9.6",
     "unplugin-vue-markdown": "^28.3.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.1.1",
+    "@faker-js/faker": "^9.4.0",
     "@iconify/json": "^2.2.303",
     "@primevue/auto-import-resolver": "^4.2.5",
     "@tsconfig/node20": "^20.1.4",
@@ -53,5 +61,10 @@
     "vite-plugin-vue-devtools": "^7.7.1",
     "vitest": "^3.0.5",
     "vue-tsc": "^2.2.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "supabase"
+    ]
   }
 }
