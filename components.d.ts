@@ -7,6 +7,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Column: typeof import('primevue/column')['default']
+    DataTable: typeof import('primevue/datatable')['default']
     MaButton: typeof import('./src/components/MaButton/index.vue')['default']
     MaInput: typeof import('./src/components/MaInput/index.vue')['default']
     MaTag: typeof import('./src/components/MaTag/index.vue')['default']
